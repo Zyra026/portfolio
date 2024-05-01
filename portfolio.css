@@ -1,0 +1,245 @@
+:root {
+    --purple: #2f2719;
+    --purple-light: #3a0233;
+    --dark-blue: #012677;
+    --blue: #5c65c0;
+    --skyblue: #00b4fc;
+    --light-blue: #005bc5;
+    --dark-pink: #f64c57;
+    --dark-magenta: #e21b5a;
+    --light-green: #61e2c2;
+    --light-purple: #d9abff;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: poppins, sans-serif;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background: #001f3d;
+    overflow-y: auto;
+    padding-top: 0px;
+}
+  
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; /* Align items to the top */
+    min-height: 100%;
+    width: 90%; /* Adjusted width */
+    max-width: 1200px; /* Added maximum width */
+    flex-wrap: wrap;
+    position: relative;
+    padding-top: 40px; /* Add padding for the navigation bar */
+}
+
+.profile-card {
+    background: #040404;
+    width: 400px;
+    height: 550px;
+    padding: 1.5rem;
+    border-radius: 30px;
+    min-height: 500px;
+    position: relative; /* Changed position to relative */
+    color: #fff;
+    margin: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.profile-card .profile-pic {
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+.profile-card .profile-pic img {
+    border-radius: 50px;
+    width: 30%;
+    margin-left: 130px;
+}
+
+.profile-card .profile-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.profile-details .intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.profile-details .intro h2 {
+    margin-top: 20px;
+}
+
+.profile-details .intro h4 {
+    background: #1d1d1d;
+    font-weight: 400;
+    border-radius: 4px;
+    padding: 5px 10px;
+    margin: 8px;
+}
+
+.profile-details .contact-info {
+    background-color: #1d1d1d;
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.profile-details .contact-info .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+.contact-info .row .icon {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+    background-color: #111;
+    text-align: center;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.row .icon:hover {
+    transform: scale(1.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.row .content {
+    min-width: 70%;
+}
+
+.row .content span {
+    font-size: 12px;
+}
+table {
+    width: 1100px;
+    border-collapse: collapse;
+    border: 1px solid #000000;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #cecdcd;
+}
+
+table th {
+    background-color: #f2f2f2;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:nth-child(odd) {
+    background-color: #ebeaea;
+}
+
+.about {
+    text-align: center;
+    float: left; 
+    width: calc(50% - 15px); 
+    margin-left: 30px; 
+}
+
+.about h1 {
+    color: #ffffff;
+    margin-bottom: 1.1rem;
+    font-size: 3.5rem;
+
+}
+
+.about table {
+    border-collapse: collapse;
+    width: 150%;
+    text-align: center;
+    margin: auto; 
+}
+
+.about th,
+.about td {
+    border: 1px solid #e2dcdc;
+    padding: 8px;
+    text-align: center;
+}
+
+.about th {
+    background-color: #f2f2f2;
+}
+
+.about h2 {
+    color: #f2f2f2;
+    font-size: 2rem;
+    margin: 0.5rem 0;
+}
+
+.about p {
+    color: #fbf8f8;
+    margin: 1.5rem 0;
+}
+
+.about .work {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+.work .workbox {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 8px;
+    border: 1px solid #333;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.work .workbox .desc {
+    width: 75%;
+    color: #555;
+}
+
+.work .workbox .desc h3 {
+    color: #f2f2f2;
+    margin-bottom: 3px;
+}
+
+.work .workbox .desc p {
+    margin: 0px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Switch to column layout on smaller screens */
+    }
+
+    .profile-card,
+    .about {
+        width: 100%; /* Full width on smaller screens */
+        margin-left: 0; /* Remove margin on smaller screens */
+        float: none; /* Remove float */
+    }
+}
+
